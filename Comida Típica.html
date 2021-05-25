@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New York</title>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		header {
+			text-align: center;
+			font-size: 20px;
+		}
+		header img {
+			width: 50%;
+		}
+		h2{
+			color:  #C32929;
+		}
+		section {
+			width: 90%;
+			font-size: 20px;
+			display: flex;
+			display: -webkit-flex;
+			margin: 50px auto;
+			padding: 20px;
+			background-color: #7DA9E0;
+			border: #000000 3px solid;
+			font-size: 20px;
+			display: flex;
+			width: 90%;
+			margin: 50px auto;
+			padding: 20px;
+		}
+		footer {
+			text-align: center;
+			font-size: 20px;
+			background-color: #C5393E;
+		}
+		#customers {
+			  font-family: Arial, Helvetica, sans-serif;
+			  border-collapse: collapse;
+			  width: 100%;
+		}
+
+		#customers td, #customers th {
+			  border: 1px solid #ddd;
+			  padding: 8px;
+		}
+
+		#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+		#customers tr:hover {background-color: #C32929;}
+
+		#customers th {
+			  padding-top: 12px;
+			  padding-bottom: 12px;
+			  text-align: left;
+			  background-color: #4CAF50;
+			  color: white;
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 20px;
+  color: white;
+}
+
+.containerTab h2{
+	color: #080501;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+	<div class="w3-bar w3-black">
+ 			 <a href="index.html" class="w3-bar-item w3-button">Home</a>
+			  <a href="Comida Típica.html" class="w3-bar-item w3-button">Comida Típica</a>
+			  <a href="Monumentos.html" class="w3-bar-item w3-button">Monumentos</a>
+			  <a href="Deportes.html" class="w3-bar-item w3-button">Deportes</a>
+			  <a href="Excursiones.html" class="w3-bar-item w3-button">Excursiones</a>
+			</div>
+	<div class="w3-display-container w3-text-white">
+   		 <img src="comida-tipica-nueva-york-hamburguesa.jpg" alt="Lights" style="width:100%">
+ 		 <div class="w3-display-middle w3-large"><h1>Restaurantes Típicos</h1></div>
+ 	</div>
+<div style="text-align:center">
+  <p>Haga clic en las casillas a continuación:</p>
+</div>
+
+
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:#0A65F9;">
+    Restaurante 1
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:#2CCF4A;">
+    Restaurante 2
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:#986D22;">
+    Restaurante 3
+  </div>
+</div>
+
+<div id="b1" class="containerTab" style="display:none;background:#0A65F9">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Black Tap</h2>
+  <p>Situado en el barrio de SoHo que ya es un clásico entre las hamburguesas neoyorquinas y que junto a sus súper batidos ya se ha convertido en uno de esos sitios imprescindibles donde comer en Nueva York que no te pueden faltar. Sus espectaculares batidos pero os aseguro que por mucha foto que veáis, hasta que no los tengas delante y los pruebes, no entenderás hasta qué punto esta gente juega en otra liga. El precio de estos batidos son de 15$.</p>
+  <img src="33315112785_7721254ca7_z.jpg" style="width:400px;height:300px;">
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:#2CCF4A">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Ellen’s Stardust Diner</h2>
+  <p>Buena comida y diversión… ¡más que asegurada! Tanto los camareros como las camareras hacen gala de la avenida en la que se encuentra el restaurante, Broadway, y sin previo aviso les veréis subidos por las mesas micrófono en mano en un espectáculo en vivo.Los precios son entre 15$ o 20$ por persona.</p>
+  <img src="ellen-stardust-dinner-3.jpg" style="width:400px;height:300px;">
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:#986D22">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Burger Joint</h2>
+  <p>La hamburguesería se encuentra en el hotel Le Meridien, un hotel de lujo.Para llegar a esta hamburguesería deberéis ir hasta la columna y pasar tras la cortina roja.Veréis un luminoso con una hamburguesa y una puerta que da acceso a lo que viene siendo una tasca en toda regla. Nada que ver con el lujo de la recepción de Le Meridien.</p>
+  <img src="32500652243_e4d5024dc4_z.jpg" style="width:400px;height:300px;">
+</div>
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+</body>
+		<footer>
+			<p>Diseñado por Sergio Gómez Vela</p>
+		</footer>
+	</body>
+</html>
